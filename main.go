@@ -1,8 +1,9 @@
 package main
 
 import (
-	"errors"
 	"log"
+
+	"github.com/cmj7271/discord-AI-bot.git/discord"
 )
 
 func main() {
@@ -14,5 +15,9 @@ func main() {
 // TODO: context 추가해서 error 추가 구현
 // TODO: PORT 번호는 환경변수로?
 func run() error {
-	return errors.New("something goes wrong")
+	err := discord.Run()
+	if err != nil {
+		log.Fatal("error runing bot: \n" + err.Error())
+	}
+	return nil
 }
