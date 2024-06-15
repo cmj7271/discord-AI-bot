@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  app:
+    image: discord-bot:v1
+    # environment:
+      # - example: ${example}
+    build: ./
+
